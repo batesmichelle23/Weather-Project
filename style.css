@@ -1,0 +1,220 @@
+img{
+    width: 50px;
+    margin: 20px auto;
+}
+
+#feelsLike{
+    text-align: center;
+}
+
+#sun:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#mon:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#tue:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#wed:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#thu:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#tempDay1:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#tempDay2:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#tempDay3:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#tempDay4:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#tempDay5:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#iconDay1:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#iconDay2:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#iconDay3:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#iconDay4:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#iconDay5:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#feelsLikeDay1:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#feelsLikeDay2:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#feelsLikeDay3:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#feelsLikeDay4:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+#feelsLikeDay5:hover{
+    background-color: rgb(70, 208, 233);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.forecast{
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-weight: bold;
+}
+
+#days{
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    padding: 2px;
+    text-align: center;
+    font-weight: bold;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+.current-city{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+.current-temp{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: rgb(0, 0, 0);   
+}
+
+h1{
+    text-align: center;
+    padding: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+
+}
+
+body  {
+    height: 769px;
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
+#currentDate{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+form{
+    text-align: center;
+}
+
+
+#cels{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    vertical-align: text-top;
+}
+
+input{
+    color: black;
+    border-radius: 8px;
+    border: none;
+    height: 30px;
+}
+
+#search:hover{
+    background-color: rgb(70, 208, 233);
+    color: black;
+    border-radius: 8px;
+    border: none;
+    height: 30px;
+}
+
+#currentLocation:hover{
+    background-color: rgb(70, 208, 233);
+    color: black;
+    border-radius: 8px;
+    border: none;
+    height: 30px;
+}
+
+
+
