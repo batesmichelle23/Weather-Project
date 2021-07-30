@@ -172,6 +172,7 @@ h1{
 body  {
     height: 769px;
     background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    padding: 30px;
 }
 
 #currentDate{
@@ -217,6 +218,11 @@ input{
 }
 
 #weatherApp{
-    border: solid blue 2px;
+    border: groove blue 5px;
+    background-color: rgba(255, 255, 255, 0.253);
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
 }
 
