@@ -158,7 +158,8 @@ p{
 .current-temp{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 40px;
-    color: rgb(0, 0, 0);   
+    color: rgb(0, 0, 0); 
+    height: 110px;
 }
 
 h1{
@@ -170,7 +171,7 @@ h1{
 }
 
 body  {
-    height: 777px;
+    height: 780px;
     background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
     padding: 30px;
 }
@@ -198,6 +199,14 @@ body  {
 }
 
 .humidity{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;
+}
+
+.weatherDescription{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
     color: rgb(0, 0, 0);

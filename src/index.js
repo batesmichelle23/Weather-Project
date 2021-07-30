@@ -44,7 +44,9 @@ function showTemp(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
-
+  let weatherDescription = document.querySelector("#weatherDescription");
+  weatherDescription.innerHTML = response.data.weather[0].description;
+  console.log(response.data);
   
 
   let iconElement = document.querySelector("#icon");
