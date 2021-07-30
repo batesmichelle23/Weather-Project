@@ -218,8 +218,6 @@ input{
 }
 
 #weatherApp{
-    border: groove blue 5px;
-    background-color: rgba(255, 255, 255, 0.253);
     width: 1000px;
     text-align: center;
     margin: 0 auto;
