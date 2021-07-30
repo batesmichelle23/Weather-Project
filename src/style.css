@@ -186,7 +186,6 @@ form{
     text-align: center;
 }
 
-
 #cels{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
@@ -224,3 +223,6 @@ input{
     padding: 10px;
 }
 
+#icon{
+    width: 100px;
+}
