@@ -19,8 +19,6 @@ if (hour > 12) {
 
 today.innerHTML = `${day} ${month} ${date}, ${year} ${hour}:${minute}`;
 
-console.log(today);
-
 function searchCity(city) {
   let apiKey = "f22a2305cf036552c9a2c6bdd1b30e53";
   let units = "imperial";
@@ -35,13 +33,15 @@ function submit(event) {
 }
 
 function showTemp(response) {
-  console.log(response.data.main.temp);
-  let temperature = Math.round(response.data.main.temp);
+  fahrTemp = response.data.main.temp;
+  let temperature = Math.round(fahrTemp);
   let city = response.data.name;
   let currentCity = document.querySelector("#currentCity");
   currentCity.innerHTML = `${city}`;
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = `${temperature}`;
+
+  
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -68,5 +68,31 @@ currentData.addEventListener("click", getPosition);
 
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", submit);
+
+function showCels(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector("#currentTemp");
+  let celsTemp = (fahrTemp - 32) * (5 / 9);
+  tempElement.innerHTML = Math.round(celsTemp);
+  celsLink.classList.add("active");
+  fahrLink.classList.remove("active");
+}
+
+function showFahr(event) {
+  event.preventDefault();
+  let fahrTemp = (23 * (9/5)) + 32;
+  let tempElement = document.querySelector("#currentTemp");
+  tempElement.innerHTML = Math.round(fahrTemp);
+  celsLink.classList.remove("active");
+  fahrLink.classList.add("active");
+}
+
+let fahrTemp = null;
+
+let celsLink = document.querySelector("#cels");
+celsLink.addEventListener("click", showCels);
+
+let fahrLink = document.querySelector("#fahr");
+fahrLink.addEventListener("click", showFahr);
 
 searchCity("Green Bay");
