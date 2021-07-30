@@ -186,12 +186,16 @@ form{
     text-align: center;
 }
 
-#cels{
+
+
+#units{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
     color: rgb(0, 0, 0);
     vertical-align: text-top;
 }
+
+
 
 input{
     color: black;

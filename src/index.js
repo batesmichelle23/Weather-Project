@@ -23,7 +23,7 @@ console.log(today);
 
 function searchCity(city) {
   let apiKey = "f22a2305cf036552c9a2c6bdd1b30e53";
-  let units = "metric";
+  let units = "imperial";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;  
   axios.get(apiUrl).then(showTemp);
 }
