@@ -216,5 +216,7 @@ input{
     height: 30px;
 }
 
-
+#weatherApp{
+    border: solid blue 2px;
+}
 
