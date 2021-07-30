@@ -40,6 +40,10 @@ function showTemp(response) {
   currentCity.innerHTML = `${city}`;
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = `${temperature}`;
+  let windElement = document.querySelector("#windSpeed");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
 
   
 

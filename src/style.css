@@ -170,7 +170,7 @@ h1{
 }
 
 body  {
-    height: 769px;
+    height: 777px;
     background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
     padding: 30px;
 }
@@ -182,11 +182,32 @@ body  {
     font-weight: bold;
 }
 
-form{
+.currentDate{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.windSpeed{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
     text-align: center;
 }
 
+.humidity{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-align: center;
+}
 
+form{
+    text-align: center;
+}
 
 #units{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -194,8 +215,6 @@ form{
     color: rgb(0, 0, 0);
     vertical-align: text-top;
 }
-
-
 
 input{
     color: black;
