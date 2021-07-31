@@ -78,7 +78,6 @@ function showFahr(event) {
   event.preventDefault();
   celsLink.classList.remove("active");
   fahrLink.classList.add("active");
-  let fahrTemp = celsTemp * 9 / 5 + 32;
   let tempElement = document.querySelector("#currentTemp");
   tempElement.innerHTML = Math.round(fahrTemp);
 }
