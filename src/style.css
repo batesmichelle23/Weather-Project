@@ -268,3 +268,22 @@ input{
 .current-temp .active:hover{
     text-decoration: none;
 }
+
+.forecast{
+    text-align: center;
+    color: black;
+}
+
+.forecastDay{
+    font-size: 30px;
+    color: black;
+}
+
+.forecastTempMax{
+    font-size: 25px; 
+}
+
+.forecastTempMin{
+    font-size: 25px; 
+    opacity: .5;
+}
