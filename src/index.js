@@ -19,9 +19,9 @@ if (hour > 12) {
 
 today.innerHTML = `${day} ${month} ${date}, ${year} ${hour}:${minute}`;
 
-function showForecast() {
+function showForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-
+  console.log(response.data.daily);
   let forecastHTML = `<div class="row">`;
   let days = ["Sun", "Mon", "Tues", "Wed"];
   days.forEach(function (day) {
@@ -41,6 +41,13 @@ function showForecast() {
   forecastHTML = forecastHTML + `</div>`;
  
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "f22a2305cf036552c9a2c6bdd1b30e53";
+  units = "imperial";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showForecast);
 }
 
 function searchCity(city) {
@@ -70,10 +77,11 @@ function showTemp(response) {
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   let weatherDescription = document.querySelector("#weatherDescription");
   weatherDescription.innerHTML = response.data.weather[0].description;
-  console.log(response.data);  
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  getForecast(response.data.coord);
 
 }
 
@@ -123,4 +131,3 @@ let fahrLink = document.querySelector("#fahr");
 fahrLink.addEventListener("click", showFahr);
 
 searchCity("Green Bay");
-showForecast();
