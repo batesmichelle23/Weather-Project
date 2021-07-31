@@ -40,10 +40,13 @@ function showTemp(response) {
   currentCity.innerHTML = `${city}`;
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = `${temperature}`;
+
   let windElement = document.querySelector("#windSpeed");
   windElement.innerHTML = Math.round(response.data.wind.speed);
+
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
+
   let weatherDescription = document.querySelector("#weatherDescription");
   weatherDescription.innerHTML = response.data.weather[0].description;
   console.log(response.data);
@@ -71,29 +74,28 @@ function getPosition(event) {
 let currentData = document.querySelector("#currentLocation");
 currentData.addEventListener("click", getPosition);
 
-
-let form = document.querySelector("#searchForm");
-form.addEventListener("submit", submit);
+function showFahr(event) {
+  event.preventDefault();
+  celsLink.classList.remove("active");
+  fahrLink.classList.add("active");
+  let fahrTemp = celsTemp * 9 / 5 + 32;
+  let tempElement = document.querySelector("#currentTemp");
+  tempElement.innerHTML = Math.round(fahrTemp);
+}
 
 function showCels(event) {
   event.preventDefault();
-  let tempElement = document.querySelector("#currentTemp");
-  let celsTemp = (fahrTemp - 32) * (5 / 9);
-  tempElement.innerHTML = Math.round(celsTemp);
   celsLink.classList.add("active");
   fahrLink.classList.remove("active");
-}
-
-function showFahr(event) {
-  event.preventDefault();
-  let fahrTemp = (23 * (9/5)) + 32;
+  let celsTemp = (fahrTemp - 32) * 5 / 9;
   let tempElement = document.querySelector("#currentTemp");
-  tempElement.innerHTML = Math.round(fahrTemp);
-  celsLink.classList.remove("active");
-  fahrLink.classList.add("active");
+  tempElement.innerHTML = Math.round(celsTemp);
 }
 
-let fahrTemp = null;
+let celsTemp = null;
+
+let form = document.querySelector("#searchForm");
+form.addEventListener("submit", submit);
 
 let celsLink = document.querySelector("#cels");
 celsLink.addEventListener("click", showCels);
