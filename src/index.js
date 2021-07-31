@@ -19,6 +19,30 @@ if (hour > 12) {
 
 today.innerHTML = `${day} ${month} ${date}, ${year} ${hour}:${minute}`;
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Mon", "Tues", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML + `
+    <div class="col-2">
+      <div class="forecastDay">${day}</div>
+      <img src="media/sunny.png" alt="Clear" />
+      <div class="forecastTemp">
+        <span class="forecastTempMax">74</span>
+        <span class="forecastTempMin">67</span>
+      </div>
+    </div>`;
+  
+   
+  });
+  
+  forecastHTML = forecastHTML + `</div>`;
+ 
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function searchCity(city) {
   let apiKey = "f22a2305cf036552c9a2c6bdd1b30e53";
   let units = "imperial";
@@ -40,17 +64,13 @@ function showTemp(response) {
   currentCity.innerHTML = `${city}`;
   let currentTemp = document.querySelector("#currentTemp");
   currentTemp.innerHTML = `${temperature}`;
-
   let windElement = document.querySelector("#windSpeed");
   windElement.innerHTML = Math.round(response.data.wind.speed);
-
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
-
   let weatherDescription = document.querySelector("#weatherDescription");
   weatherDescription.innerHTML = response.data.weather[0].description;
-  console.log(response.data);
-  
+  console.log(response.data);  
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -103,3 +123,4 @@ let fahrLink = document.querySelector("#fahr");
 fahrLink.addEventListener("click", showFahr);
 
 searchCity("Green Bay");
+showForecast();
