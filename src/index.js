@@ -101,7 +101,7 @@ function showTemp(response) {
 function currentLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
-  let units = "metric";
+  let units = "imperial";
   let apiKey = "f22a2305cf036552c9a2c6bdd1b30e53";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showTemp);
@@ -115,32 +115,7 @@ function getPosition(event) {
 let currentData = document.querySelector("#currentLocation");
 currentData.addEventListener("click", getPosition);
 
-function showFahr(event) {
-  event.preventDefault();
-  celsLink.classList.remove("active");
-  fahrLink.classList.add("active");
-  let tempElement = document.querySelector("#currentTemp");
-  tempElement.innerHTML = Math.round(fahrTemp);
-}
-
-function showCels(event) {
-  event.preventDefault();
-  celsLink.classList.add("active");
-  fahrLink.classList.remove("active");
-  let celsTemp = (fahrTemp - 32) * 5 / 9;
-  let tempElement = document.querySelector("#currentTemp");
-  tempElement.innerHTML = Math.round(celsTemp);
-}
-
-let celsTemp = null;
-
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", submit);
-
-let celsLink = document.querySelector("#cels");
-celsLink.addEventListener("click", showCels);
-
-let fahrLink = document.querySelector("#fahr");
-fahrLink.addEventListener("click", showFahr);
 
 searchCity("Green Bay");
