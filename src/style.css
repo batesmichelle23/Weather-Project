@@ -259,16 +259,6 @@ input{
     width: 100px;
 }
 
-.current-temp .active{
-    color: black;
-    cursor: default;
-    text-decoration: none;
-}
-
-.current-temp .active:hover{
-    text-decoration: none;
-}
-
 .forecast{
     text-align: center;
     color: black;
