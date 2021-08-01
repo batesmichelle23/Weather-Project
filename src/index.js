@@ -40,7 +40,7 @@ function showForecast(response) {
     forecastHTML = forecastHTML + `
     <div class="col-2">
       <div class="forecastDay">${formatDay(forecastDay.dt)}</div>
-      <img src= "http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+      <img src= "https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
       alt="" />
       <div class="forecastTemp">
         <span class="forecastTempMax">${Math.round(forecastDay.temp.max)}\u00B0</span>
@@ -92,7 +92,7 @@ function showTemp(response) {
   weatherDescription.innerHTML = response.data.weather[0].description;
 
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
   getForecast(response.data.coord);
 
